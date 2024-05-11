@@ -1,5 +1,5 @@
 import { Account, Client, ID } from "appwrite";
-import conf from "../conf.js";
+import conf from "../conf/conf.js";
 
 export class AuthService {
   client = new Client();
@@ -43,7 +43,7 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      throw error;
+      console.log("Appwrite service :: logout :: error", error);
     }
     return null;
   }
