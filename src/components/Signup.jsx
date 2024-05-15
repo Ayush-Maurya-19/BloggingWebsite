@@ -6,7 +6,7 @@ import { Button, Input, Logo } from "./index.js";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 
-const Signup = () => {
+function Signup() {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ const Signup = () => {
             to="/login"
             className="font-medium text-primary transition-all duration-200 hover:underline"
           >
-            Login
+            Sign In
           </Link>
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
@@ -88,6 +88,6 @@ const Signup = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Signup;
